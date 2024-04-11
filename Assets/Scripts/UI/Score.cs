@@ -1,25 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private Bird _bird;
-    [SerializeField] private TMP_Text _score;
+    private TMP_Text _scoreText;
+    private int _score;
 
-    private void OnEnable()
+    private void Start()
     {
-        _bird.ScoreChanged += OnScoreChanged;
+        _scoreText = GetComponent<TMP_Text>();    
     }
 
-    private void OnDisable()
+    public void IncreaseScore(int value)
     {
-        _bird.ScoreChanged -= OnScoreChanged;
+        _score += value;
+        _scoreText.text = _score.ToString();
     }
 
-    private void OnScoreChanged(int score)
-    { 
-        _score.text = score.ToString();
+    public void ResetScore()
+    {
+        _score = 0;
+        _scoreText.text = _score.ToString();
     }
 }
