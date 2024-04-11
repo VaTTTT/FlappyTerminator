@@ -16,13 +16,7 @@ public abstract class Bullet : MonoBehaviour
         transform.position += transform.right * _speed * Time.deltaTime;
     }
 
-    protected abstract void DestroyCollidingTarget(Collider2D target);
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        DestroyCollidingTarget(collision);
-        Destroy(gameObject);
-    }
+    //protected abstract void DestroyCollidingTarget(Collider2D target);
 
     private IEnumerator DelayedDestroy(float time)
     { 

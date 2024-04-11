@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class EnemyBullet : Bullet
 {
-    protected override void DestroyCollidingTarget(Collider2D target)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (target.TryGetComponent(out Player player))
-        {
+        if (collision.gameObject.TryGetComponent(out Player player))
+        { 
             player.Die();
-        }
+            Destroy(gameObject);
+        }        
     }
 }
