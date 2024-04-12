@@ -589,7 +589,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -819,7 +819,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -846,12 +846,12 @@ Tilemap:
     m_Data: {fileID: -7517053698926566003, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 3020870990670601969, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -8620202154233844528, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 24
     m_Data:
@@ -1172,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1269939374825937263, guid: 192a7a6884569b44eb3596755fba86c3, type: 3}
       propertyPath: _shotDelay
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8667956606591811235, guid: 192a7a6884569b44eb3596755fba86c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1301,7 +1301,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -210}
-  m_SizeDelta: {x: 276.94, y: 84.2}
+  m_SizeDelta: {x: 522.74, y: 166.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845211627
 MonoBehaviour:
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   _capacity: 3
   _score: {fileID: 845211629}
   _template: {fileID: 8214155856834438229, guid: 59d64d5c62b3d1f4687cca4696ded887, type: 3}
-  _secondsBetweenSpawn: 6
+  _delay: 5
   _maxSpawnPositionY: -3.3
   _minSpawnPositionY: -3.3
 --- !u!1 &1023130624
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   _capacity: 5
   _score: {fileID: 845211629}
   _template: {fileID: 1841894378926209019, guid: 50db5a51548a4944f9ae517c47153be3, type: 3}
-  _secondsBetweenSpawn: 3
+  _delay: 3
   _maxSpawnPositionY: 2
   _minSpawnPositionY: -2
 --- !u!4 &1123591538 stripped
@@ -1812,7 +1812,7 @@ MonoBehaviour:
   _capacity: 5
   _score: {fileID: 845211629}
   _template: {fileID: 1841894378926209019, guid: f87a3b16743fb7b4b8514f3949d01c4e, type: 3}
-  _secondsBetweenSpawn: 4
+  _delay: 2
   _maxSpawnPositionY: 4
   _minSpawnPositionY: 1
 --- !u!1 &1587313279

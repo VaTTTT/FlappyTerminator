@@ -46,21 +46,24 @@ public class PlayerMover : MonoBehaviour
 
     private void Update()
     {
-        if (_isOnGround)
+        if (Time.timeScale > 0)
         {
-            _rigidBody.velocity = new Vector2(_speed, 0);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            _isOnGround = false;
-            _rigidBody.velocity = new Vector2(_speed, 0);
-            transform.rotation = _maxRotation;
-            _rigidBody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);
-            _playerAnimator.PlayRocketJumpAnimation();
-        }
+            if (_isOnGround)
+            {
+                _rigidBody.velocity = new Vector2(_speed, 0);
+            }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _isOnGround = false;
+                _rigidBody.velocity = new Vector2(_speed, 0);
+                transform.rotation = _maxRotation;
+                _rigidBody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);
+                _playerAnimator.PlayRocketJumpAnimation();
+            }
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void OnGrounded()

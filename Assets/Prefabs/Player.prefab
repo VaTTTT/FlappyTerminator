@@ -481,6 +481,9 @@ MonoBehaviour:
   _startPosition: {x: 0, y: 0, z: 0}
   _speed: 3
   _tapForce: 250
+  _rotationSpeed: 0
+  _maxRotationZ: 0
+  _minRotationZ: 0
 --- !u!114 &100298383865963982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,4 +522,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _character: {fileID: 434372999502734564}
   _backpack: {fileID: 3354547243060661148}
-  _weapon: {fileID: 0}
+  _characterAnimator: {fileID: 4732319183943764274}
+  _backpackAnimator: {fileID: 3065994588951398866}

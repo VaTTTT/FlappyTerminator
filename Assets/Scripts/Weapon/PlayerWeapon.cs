@@ -5,9 +5,12 @@ public class PlayerWeapon : Weapon
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Time.timeScale > 0)
         {
-            StartCoroutine(nameof(Shoot));
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                StartCoroutine(nameof(Shoot));
+            }
         }
     }
 }

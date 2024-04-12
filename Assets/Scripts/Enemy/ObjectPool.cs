@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject _container;
     [SerializeField] private int _capacity;
-    [SerializeField] Score _score;
+    [SerializeField] private Score _score;
 
     private Camera _camera;
     private List<Enemy> _pool = new();
